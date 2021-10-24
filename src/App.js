@@ -1,5 +1,3 @@
-import React from "react";
-
 import { useState } from "react";
 import Statistics from "./components/Statisctics.js/Statistics";
 import FeedbackOptions from "./components/FeedbackOptions/FeedbackOptions";
@@ -17,7 +15,6 @@ export default function App() {
 
   const handleFeedBack = (e) => {
     const { textContent } = e.target;
-    console.log(textContent);
 
     switch (textContent) {
       case "Good":
