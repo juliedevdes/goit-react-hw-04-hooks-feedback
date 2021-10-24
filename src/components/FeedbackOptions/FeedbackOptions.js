@@ -9,11 +9,7 @@ export default class FeedbackOptions extends React.Component {
 
   static propTypes = {
     options: PropTypes.arrayOf(PropTypes.string),
-    onLeaveFeedback: PropTypes.shape({
-      good: PropTypes.func,
-      bad: PropTypes.func,
-      neutral: PropTypes.func,
-    }),
+    onLeaveFeedback: PropTypes.func,
   };
 
   render() {
@@ -21,10 +17,7 @@ export default class FeedbackOptions extends React.Component {
       <ul className={s.list}>
         {this.props.options.map((option) => (
           <li key={option} className={s.item}>
-            <button
-              className={s.btn}
-              onClick={this.props.onLeaveFeedback[option]}
-            >
+            <button className={s.btn} onClick={this.props.onLeaveFeedback}>
               {option}
             </button>
           </li>
